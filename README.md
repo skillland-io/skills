@@ -12,9 +12,9 @@ Three agent skills for Claude Code, Codex and Cursor that build, check and fix o
 
 | Skill | Score | What it does | Starts on its own |
 | --- | --- | --- | --- |
-| [`skillland-validate`](skills/skillland-validate/SKILL.md) | [![skillland](https://skillland.io/badge/gh/skillland-io/skills/skills/skillland-validate)](https://skillland.io/check/skillland-io/skills/skills/skillland-validate) | Runs the validator on a skill and reports the score, the grade and each finding with its rule page. Changes no files. | Yes, when you ask to check or review a skill |
-| [`skillland-fix`](skills/skillland-fix/SKILL.md) | [![skillland](https://skillland.io/badge/gh/skillland-io/skills/skills/skillland-fix)](https://skillland.io/check/skillland-io/skills/skills/skillland-fix) | Edits a skill and re-checks it until it scores A. | No, call it by name |
-| [`skillland-build`](skills/skillland-build/SKILL.md) | [![skillland](https://skillland.io/badge/gh/skillland-io/skills/skills/skillland-build)](https://skillland.io/check/skillland-io/skills/skills/skillland-build) | Asks the questions of the [skill builder](https://skillland.io/validate/builder), writes the folder where your agent loads skills, then checks it. | When you ask to build a skill with Skillland |
+| [`skillland-validate`](skills/skillland-validate/SKILL.md) | [![skillland](https://skillland.io/badge/skillland-io/skills/skillland-validate)](https://skillland.io/skills/skillland-io/skills/skillland-validate) | Runs the validator on a skill and reports the score, the grade and each finding with its rule page. Changes no files. | Yes, when you ask to check or review a skill |
+| [`skillland-fix`](skills/skillland-fix/SKILL.md) | [![skillland](https://skillland.io/badge/skillland-io/skills/skillland-fix)](https://skillland.io/skills/skillland-io/skills/skillland-fix) | Edits a skill and re-checks it until it scores A. | No, call it by name |
+| [`skillland-build`](skills/skillland-build/SKILL.md) | [![skillland](https://skillland.io/badge/skillland-io/skills/skillland-build)](https://skillland.io/skills/skillland-io/skills/skillland-build) | Asks the questions of the [skill builder](https://skillland.io/validate/builder), writes the folder where your agent loads skills, then checks it. | When you ask to build a skill with Skillland |
 
 The skills hold no copy of the rules. Each one runs `npx -y -p @skillland/validator@0.6.0 skillland check` at a pinned version, so a new rule reaches them with the next release of these skills. They need Node 20 or later. The skills pre-approve no tools, so your agent asks before it runs that command.
 
@@ -53,7 +53,7 @@ A grade measures structure against the official guidance. It doesn't tell you wh
 
 ## Checks on this repo
 
-CI runs the validator on every skill here and fails below 90, so each one stays at A. The score badges in the table above are scored live by skillland.io from this repo:
+CI runs the validator on every skill here and fails below 90, so each one stays at A. The score badges in the table above come from the skills' pages on skillland.io:
 
 ```bash
 npx -y -p @skillland/validator@latest skillland check skills --min-score 90
