@@ -1,0 +1,13 @@
+{
+  "name": "skillland/skillland",
+  "version": "1.0.1",
+  "description": "Build, check and fix agent skills (SKILL.md) with the open Skillland validator. Each finding links a rule page that quotes the official guidance.",
+  "author": {
+    "name": "Skillland",
+    "url": "https://skillland.io"
+  },
+  "homepage": "https://skillland.io/tools/skills",
+  "repository": "https://github.com/skillland-io/skills",
+  "license": "MIT",
+  "private": true
+}
