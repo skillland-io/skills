@@ -20,7 +20,16 @@ The skills hold no copy of the rules. Each one runs `npx -y -p @skillland/valida
 
 ## Install
 
-With the [skills CLI](https://github.com/vercel-labs/skills):
+As a Claude Code plugin, all three skills at once:
+
+```text
+/plugin marketplace add skillland-io/skills
+/plugin install skillland@skillland
+```
+
+On Claude Code 2.1.275 or later one line does both: `/plugin install skillland --marketplace skillland-io/skills`. In a plugin the skills take the plugin name as a prefix, so `skillland-fix` runs as `/skillland:skillland-fix`.
+
+With the [skills CLI](https://github.com/vercel-labs/skills), for Claude Code, Codex or Cursor:
 
 ```bash
 npx skills add skillland-io/skills
@@ -37,7 +46,7 @@ Or copy a folder from `skills/` to where your agent looks for skills:
 ## Use
 
 - "Check my pdf-forms skill" loads `skillland-validate`.
-- `/skillland-fix` in Claude Code and Cursor, or `$skillland-fix` in Codex, fixes what it found.
+- `/skillland-fix` in Claude Code (`/skillland:skillland-fix` from the plugin) and Cursor, or `$skillland-fix` in Codex, fixes what it found.
 - "Build a skill with Skillland that writes release notes" loads `skillland-build`.
 
 A grade measures structure against the official guidance. It doesn't tell you whether a skill does its job well, so try it on a real task too.
@@ -49,6 +58,8 @@ CI runs the validator on every skill here and fails below 90, so each one stays 
 ```bash
 npx -y -p @skillland/validator@latest skillland check skills --min-score 90
 ```
+
+It also runs `claude plugin validate --strict .` on the plugin and marketplace files in `.claude-plugin/`. Bump `version` in `plugin.json` when a skill changes, since Claude Code offers plugin updates by version.
 
 ## Related
 
