@@ -14,7 +14,7 @@ Edits a skill until the Skillland validator grades it A. This skill changes file
 1. Run the check on the skill folder, the same command `skillland-validate` uses:
 
    ```bash
-   npx -y -p @skillland/validator@0.6.0 skillland check <path> --json
+   npx -y -p @skillland/validator@0.7.0 skillland check <path> --json
    ```
 
    If a report for the same files is already in the conversation, reuse it. Note the starting score and grade.
