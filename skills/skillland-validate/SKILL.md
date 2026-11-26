@@ -14,7 +14,7 @@ Runs the open Skillland validator on one or more skills and reports what it find
 2. Run the validator. It needs Node 20 or later:
 
    ```bash
-   npx -y -p @skillland/validator@0.6.0 skillland check <path> --json
+   npx -y -p @skillland/validator@0.7.0 skillland check <path> --json
    ```
 
    Exit code 1 only means a skill has an error; the JSON is still printed. Exit code 2 means a bad path or option. If `npx` itself fails, show its error and stop. Never estimate a score by reading the file yourself.
