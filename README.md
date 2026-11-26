@@ -8,7 +8,7 @@ Website: **[skillland.io/tools/skills](https://skillland.io/tools/skills)**. Ins
 
 ![skillland-fix takes a skill from 82 (B) to 100 (A) in Claude Code](.github/preview.png)
 
-Three agent skills for Claude Code, Codex and Cursor that build, check and fix other skills with the [Skillland validator](https://github.com/skillland-io/skill-validator). The validator has 40 rules, and each one quotes the official guidance it relies on: the [Agent Skills specification](https://agentskills.io/specification) and the skills docs from Anthropic, OpenAI and Cursor.
+Three agent skills for Claude Code, Codex and Cursor that build, check and fix other skills with the [Skillland validator](https://github.com/skillland-io/skill-validator). Each validator rule quotes the official guidance it relies on: the [Agent Skills specification](https://agentskills.io/specification) and the skills docs from Anthropic, OpenAI and Cursor.
 
 | Skill | What it does | Starts on its own |
 | --- | --- | --- |
