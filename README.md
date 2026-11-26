@@ -16,7 +16,7 @@ Three agent skills for Claude Code, Codex and Cursor that build, check and fix o
 | [`skillland-fix`](skills/skillland-fix/SKILL.md) | Edits a skill and re-checks it until it scores A. | No, call it by name |
 | [`skillland-build`](skills/skillland-build/SKILL.md) | Asks the questions of the [skill builder](https://skillland.io/validate/builder), writes the folder where your agent loads skills, then checks it. | When you ask to build a skill with Skillland |
 
-The skills hold no copy of the rules. Each one runs `npx -y -p @skillland/validator@0.6.0 skillland check` at a pinned version, so a new rule reaches them with the next release of these skills. They need Node 20 or later.
+The skills hold no copy of the rules. Each one runs `npx -y -p @skillland/validator@0.6.0 skillland check` at a pinned version, so a new rule reaches them with the next release of these skills. They need Node 20 or later. The skills pre-approve no tools, so your agent asks before it runs that command.
 
 ## Install
 
@@ -56,7 +56,7 @@ A grade measures structure against the official guidance. It doesn't tell you wh
 CI runs the validator on every skill here and fails below 90, so each one stays at A:
 
 ```bash
-npx -y -p @skillland/validator@0.6.0 skillland check skills --min-score 90
+npx -y -p @skillland/validator@latest skillland check skills --min-score 90
 ```
 
 It also runs `claude plugin validate --strict .` on the plugin and marketplace files in `.claude-plugin/`. Bump `version` in `plugin.json` when a skill changes, since Claude Code offers plugin updates by version.

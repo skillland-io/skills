@@ -20,7 +20,7 @@ jobs:
         with:
           node-version: 22
       - name: Every skill scores A
-        run: npx -y -p @skillland/validator@0.6.0 skillland check skills --min-score 90
+        run: npx -y -p @skillland/validator@latest skillland check skills --min-score 90
 
   plugin:
     runs-on: ubuntu-latest

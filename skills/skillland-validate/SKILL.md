@@ -2,7 +2,6 @@
 name: skillland-validate
 description: Checks an agent skill (a SKILL.md folder) against the Skillland validator rules and reports its score, grade and each finding with a link to the rule. Use when the user asks to check, lint, review or score a skill, or right after a SKILL.md was written or edited.
 license: MIT
-allowed-tools: Bash(npx -y -p @skillland/validator@0.6.0 skillland check *)
 ---
 
 # Skillland validate

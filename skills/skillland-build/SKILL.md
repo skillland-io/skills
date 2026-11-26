@@ -2,7 +2,6 @@
 name: skillland-build
 description: Builds a new agent skill for Claude Code, Codex or Cursor by asking the questions of the Skillland skill builder, writing the SKILL.md folder where the agent loads it and checking it with the Skillland validator. Use when the user asks to build a skill with Skillland or names skillland-build.
 license: MIT
-allowed-tools: Bash(npx -y -p @skillland/validator@0.6.0 skillland check *)
 ---
 
 # Skillland build

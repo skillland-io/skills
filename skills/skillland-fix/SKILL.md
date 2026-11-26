@@ -2,7 +2,6 @@
 name: skillland-fix
 description: Fixes what the Skillland validator finds in an agent skill (a SKILL.md folder), editing the files and re-checking until the skill scores A. Use when the user asks to fix a skill's findings or raise its Skillland score.
 license: MIT
-allowed-tools: Bash(npx -y -p @skillland/validator@0.6.0 skillland check *)
 disable-model-invocation: true
 ---
 
