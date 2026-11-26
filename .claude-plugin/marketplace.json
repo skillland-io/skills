@@ -1,0 +1,17 @@
+{
+  "name": "skillland",
+  "description": "Skillland's agent skills for building, checking and fixing SKILL.md files.",
+  "owner": {
+    "name": "Skillland",
+    "url": "https://skillland.io"
+  },
+  "plugins": [
+    {
+      "name": "skillland",
+      "source": "./",
+      "description": "Build, check and fix agent skills (SKILL.md) with the open Skillland validator.",
+      "category": "development",
+      "tags": ["skills", "validator"]
+    }
+  ]
+}

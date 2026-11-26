@@ -21,3 +21,13 @@ jobs:
           node-version: 22
       - name: Every skill scores A
         run: npx -y -p @skillland/validator@latest skillland check skills --min-score 90
+
+  plugin:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Plugin and marketplace files are valid
+        run: npx -y @anthropic-ai/claude-code plugin validate --strict .
