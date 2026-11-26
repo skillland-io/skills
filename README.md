@@ -1,6 +1,14 @@
 # Skillland skills
 
-Three agent skills for Claude Code, Codex and Cursor that build, check and fix other skills with the [Skillland validator](https://github.com/skillland-io/skill-validator). The validator has 40 rules, and each one quotes the official guidance it relies on: the [Agent Skills specification](https://agentskills.io/specification) and the skills docs from Anthropic, OpenAI and Cursor.
+[![CI](https://github.com/skillland-io/skills/actions/workflows/ci.yml/badge.svg)](https://github.com/skillland-io/skills/actions/workflows/ci.yml)
+[![validator](https://img.shields.io/npm/v/@skillland/validator?label=%40skillland%2Fvalidator)](https://www.npmjs.com/package/@skillland/validator)
+[![license](https://img.shields.io/github/license/skillland-io/skills)](LICENSE)
+
+Website: **[skillland.io/tools/skills](https://skillland.io/tools/skills)**. Install steps, what each skill does and a sample fix run.
+
+![skillland-fix takes a skill from 82 (B) to 100 (A) in Claude Code](.github/preview.png)
+
+Three agent skills for Claude Code, Codex and Cursor that build, check and fix other skills with the [Skillland validator](https://github.com/skillland-io/skill-validator). Each validator rule quotes the official guidance it relies on: the [Agent Skills specification](https://agentskills.io/specification) and the skills docs from Anthropic, OpenAI and Cursor.
 
 | Skill | What it does | Starts on its own |
 | --- | --- | --- |
@@ -41,6 +49,14 @@ CI runs the validator on every skill here and fails below 90, so each one stays 
 ```bash
 npx -y -p @skillland/validator@latest skillland check skills --min-score 90
 ```
+
+## Related
+
+- [skill-validator](https://github.com/skillland-io/skill-validator): the rules and scoring these skills run, published as [`@skillland/validator`](https://www.npmjs.com/package/@skillland/validator).
+- [skillland.io/validate](https://skillland.io/validate): the same checks in the browser, with a page for [every rule](https://skillland.io/validate/rules).
+- [skillland.io/skills](https://skillland.io/skills): the most installed public skills, each with its score and report.
+
+Found a rule that reads the guidance wrong? [Open an issue on the validator](https://github.com/skillland-io/skill-validator/issues) with a link to the source.
 
 ## License
 
