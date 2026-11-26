@@ -2,7 +2,7 @@
 name: skillland-validate
 description: Checks an agent skill (a SKILL.md folder) against the Skillland validator rules and reports its score, grade and each finding with a link to the rule. Use when the user asks to check, lint, review or score a skill, or right after a SKILL.md was written or edited.
 license: MIT
-allowed-tools: Bash(npx -y -p @skillland/validator@latest skillland check *)
+allowed-tools: Bash(npx -y -p @skillland/validator@0.6.0 skillland check *)
 ---
 
 # Skillland validate
@@ -15,7 +15,7 @@ Runs the open Skillland validator on one or more skills and reports what it find
 2. Run the validator. It needs Node 20 or later:
 
    ```bash
-   npx -y -p @skillland/validator@latest skillland check <path> --json
+   npx -y -p @skillland/validator@0.6.0 skillland check <path> --json
    ```
 
    Exit code 1 only means a skill has an error; the JSON is still printed. Exit code 2 means a bad path or option. If `npx` itself fails, show its error and stop. Never estimate a score by reading the file yourself.
@@ -49,4 +49,4 @@ Run skillland-fix to fix these.
 ## Notes
 
 - The score measures structure against official guidance: the Agent Skills specification and the skills docs from Anthropic, OpenAI and Cursor. It does not show whether the skill does its job well, so don't say it does.
-- `@latest` always runs the current rules. Every rule, its source quote and the scoring formula are at https://skillland.io/validate/rules.
+- The validator version is pinned, so results stay the same until the skill is updated. Every rule, its source quote and the scoring formula are at https://skillland.io/validate/rules.

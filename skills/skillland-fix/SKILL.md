@@ -2,7 +2,7 @@
 name: skillland-fix
 description: Fixes what the Skillland validator finds in an agent skill (a SKILL.md folder), editing the files and re-checking until the skill scores A. Use when the user asks to fix a skill's findings or raise its Skillland score.
 license: MIT
-allowed-tools: Bash(npx -y -p @skillland/validator@latest skillland check *)
+allowed-tools: Bash(npx -y -p @skillland/validator@0.6.0 skillland check *)
 disable-model-invocation: true
 ---
 
@@ -15,7 +15,7 @@ Edits a skill until the Skillland validator grades it A. This skill changes file
 1. Run the check on the skill folder, the same command `skillland-validate` uses:
 
    ```bash
-   npx -y -p @skillland/validator@latest skillland check <path> --json
+   npx -y -p @skillland/validator@0.6.0 skillland check <path> --json
    ```
 
    If a report for the same files is already in the conversation, reuse it. Note the starting score and grade.

@@ -2,7 +2,7 @@
 name: skillland-build
 description: Builds a new agent skill for Claude Code, Codex or Cursor by asking the questions of the Skillland skill builder, writing the SKILL.md folder where the agent loads it and checking it with the Skillland validator. Use when the user asks to build a skill with Skillland or names skillland-build.
 license: MIT
-allowed-tools: Bash(npx -y -p @skillland/validator@latest skillland check *)
+allowed-tools: Bash(npx -y -p @skillland/validator@0.6.0 skillland check *)
 ---
 
 # Skillland build
@@ -26,7 +26,7 @@ Turns a few answers into a skill folder that scores A on the Skillland validator
 5. Check the folder:
 
    ```bash
-   npx -y -p @skillland/validator@latest skillland check <folder> --json
+   npx -y -p @skillland/validator@0.6.0 skillland check <folder> --json
    ```
 
    Fix each finding by its `fix` line and check again until the grade is A, at most three rounds. If a fix needs a fact the user hasn't given, ask for it instead of making it up.
