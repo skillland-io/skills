@@ -15,12 +15,14 @@ jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - name: Every skill scores A, with an A in Security
+        uses: skillland-io/check-action@v1
         with:
-          node-version: 22
-      - name: Every skill scores A
-        run: npx -y -p @skillland/validator@latest skillland check skills --min-score 90
+          path: skills
+          min-score: 90
+          min-area-grade: security=A
+          validator-version: latest
 
   plugin:
     runs-on: ubuntu-latest
